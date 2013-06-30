@@ -1,0 +1,255 @@
+﻿<Page
+    x:Class="ThaiMung.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ThaiMung"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.BottomAppBar>
+        <AppBar x:Name="mainAppbar" Background="#E50878FF" BorderBrush="{x:Null}">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Height="96" VerticalAlignment="Top" Width="1346">
+                <StackPanel Orientation="Horizontal" Width="1228" Height="100" Margin="0,0,0,-4">
+                    <Button x:ConnectionId='2' x:Name="postButton" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Background="{x:Null}" Style="{StaticResource AddAppBarButtonStyle}" AutomationProperties.Name="Post"                    />
+                    <Button x:ConnectionId='3' HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Style="{StaticResource FilterAppBarButtonStyle}"                     />
+                    <Button x:ConnectionId='4' x:Name="emergencyButton" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Style="{StaticResource PhoneAppBarButtonStyle}" AutomationProperties.Name="Emergency Call"                        />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Width="128" HorizontalAlignment="Right">
+                    <Button x:ConnectionId='1' x:Name="logoutButton" HorizontalAlignment="Right" VerticalAlignment="Bottom" Style="{StaticResource ContactPresenceAppBarButtonStyle}" AutomationProperties.Name="Log out"                      Background="#FF0A6FE8"/>
+                </StackPanel>
+            </StackPanel>
+
+        </AppBar>
+    </Page.BottomAppBar>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="606*"/>
+            <ColumnDefinition Width="77*"/>
+        </Grid.ColumnDefinitions>
+        <Canvas x:ConnectionId='5' x:Name="bgCanvas" HorizontalAlignment="Left" Height="768" VerticalAlignment="Top" Width="1366" Grid.ColumnSpan="2" Background="#FFEEDCDC"                                                  >
+            <Canvas Height="33" Width="1366" Background="#FF6A40DA"/>
+            <TextBlock x:Name="Mainusername" Canvas.Left="112" TextWrapping="Wrap" Text="Name" Foreground="White" FontFamily="Segoe UI" FontSize="18" Canvas.Top="3"/>
+            <TextBlock x:Name="Mainusername_Copy" Canvas.Left="20" TextWrapping="Wrap" Text="Log in as" Foreground="White" FontFamily="Segoe UI" FontSize="18" Canvas.Top="3"/>
+            
+
+        </Canvas>
+        <Canvas x:Name="emergencyCanvas" HorizontalAlignment="Left" Height="768" Margin="956,0,0,0" VerticalAlignment="Top" Width="410" Background="#E50878FF" Grid.ColumnSpan="2">
+            <TextBlock Canvas.Left="77" TextWrapping="Wrap" Text="Emergency Call" Canvas.Top="25" Foreground="Black" FontFamily="Segoe UI" FontSize="30"/>
+            <ScrollViewer Height="644" Canvas.Left="32" Canvas.Top="93" Width="368">
+                <TextBlock TextWrapping="Wrap" FontSize="18" FontFamily="Segoe UI" Width="368">
+            		<Run Text="ขสมก."/>
+            		<Run Text="&#x9;&#x9;&#x9;&#x9;"/>
+            		<Run Text="184"/>
+            		<LineBreak/>
+            		<Run/>
+            		<LineBreak/>
+            		<Run Text="แจ้งเหตุด่วนเหตุร้าย"/>
+            		<Run Text="&#x9;&#x9;&#x9;"/>
+            		<Run Text="191"/>
+            		<LineBreak/>
+            		<Run Text=" "/>
+            		<LineBreak/>
+            		<Run Text="เหตุฉุกเฉิน ไ"/>
+            		<Run Text="ฟไหม้"/>
+            		<Run Text="&#x9;&#x9;&#x9;"/>
+            		<Run Text="199"/>
+            		<LineBreak/>
+            		<Run/>
+            		<LineBreak/>
+            		<Run Text="แจ้งการประปา น้ำไม่ไหล"/>
+            		<Run Text="&#x9;&#x9;"/>
+            		<Run Text="1125"/>
+            		<LineBreak/>
+            		<Run Text=" "/>
+            		<LineBreak/>
+            		<Run Text="ศูนย์บริการรับแจ้งไฟฟ้าขัดข้อง"/>
+            		<Run Text="&#x9;&#x9;"/>
+            		<Run Text="1130 "/>
+            		<LineBreak/>
+            		<Run/>
+            		<LineBreak/>
+            		<Run Text="สถานีวิทยุ จส.100"/>
+            		<Run Text="&#x9;&#x9;&#x9;"/>
+            		<Run Text="1137"/>
+            		<LineBreak/>
+            		<Run/>
+            		<LineBreak/>
+            		<Run Text="ตำรวจท่องเที่ยว"/>
+            		<Run Text=" ช่วยเหลือนักท่องเที่ยว"/>
+            		<Run Text="&#x9;"/>
+            		<Run Text="1155"/>
+            		<LineBreak/>
+            		<Run/>
+            		<LineBreak/>
+            		<Run Text="ตำรวจทางหลวง"/>
+            		<Run Text="&#x9;&#x9;&#x9;"/>
+            		<Run Text="1193 "/>
+            		<LineBreak/>
+            		<Run Text=" "/>
+            		<LineBreak/>
+            		<Run Text="กองปราบปราม"/>
+            		<Run Text="&#x9;&#x9;&#x9;"/>
+            		<Run Text="1195 "/>
+            		<LineBreak/>
+            		<Run Text=" "/>
+            		<LineBreak/>
+            		<Run Text="ศูนย์ควบคุมจราจร "/>
+            		<Run Text="&#x9;&#x9;&#x9;"/>
+            		<Run Text="1197"/>
+            		<LineBreak/>
+            		<Run Text=" "/>
+            		<LineBreak/>
+            		<Run Text="ศูนย์ประชาบดี"/>
+            		<Run Text="&#x9;&#x9;&#x9;"/>
+            		<Run Text="1300"/>
+            		<LineBreak/>
+            		<Run/>
+            		<LineBreak/>
+            		<Run Text="ข้อมูลทางพิเศษ"/>
+            		<Run Text="&#x9;&#x9;&#x9;"/>
+            		<Run Text="1543"/>
+            		<LineBreak/>
+            		<Run/>
+            		<LineBreak/>
+            		<Run Text="หน่วยแพทย์กู้ชีวิต วชิรพยาบาล"/>
+            		<Run Text="&#x9;&#x9;"/>
+            		<Run Text="1554"/>
+            		<LineBreak/>
+            		<Run/>
+            		<LineBreak/>
+            		<Run Text="ศูนย์รับเรื่องร้องทุกข์"/>
+            		<Run Text=" "/>
+            		<Run Text="กทม."/>
+            		<Run Text=" "/>
+            		<Run Text="24"/>
+            		<Run Text=" "/>
+            		<Run Text="ชั่วโมง"/>
+            		<Run Text="&#x9;"/>
+            		<Run Text="1555"/>
+            		<LineBreak/>
+            		<Run/>
+            		<LineBreak/>
+            		<Run Text="สายด่วนผู้บริโภคกับ อย."/>
+            		<Run Text="&#x9;&#x9;"/>
+            		<Run Text="1556"/>
+            		<LineBreak/>
+            		<Run/>
+            		<LineBreak/>
+            		<Run Text="สายด่วนกรมทางหลวง"/>
+            		<Run Text="&#x9;&#x9;"/>
+            		<Run Text="1586"/>
+            		<LineBreak/>
+            		<Run/>
+            		<LineBreak/>
+            		<Run Text="สถานีวิทยุชุมชนร่วมด้วยช่วยกัน"/>
+            		<Run Text="&#x9;1677"/>
+            		<LineBreak/>
+            		<Run/>
+            		<LineBreak/>
+            		<Run Text="ศูนย์นเรนทร"/>
+            		<Run Text="&#x9;&#x9;&#x9;"/>
+            		<Run Text="1669"/>
+            		<LineBreak/>
+            		<Run Text=" "/>
+            		<LineBreak/>
+            		<Run Text="ศูนย์ส่งกลับและรถพยาบาล - กรมตำรวจ"/>
+            		<Run Text="&#x9;"/>
+            		<Run Text="1691"/>
+                </TextBlock>
+            </ScrollViewer>
+            <Button Canvas.Top="13" Style="{StaticResource PhoneAppBarButtonStyle}" Canvas.Left="-4" Foreground="Black" AutomationProperties.Name=""/>
+        </Canvas>
+        <Canvas x:ConnectionId='6' x:Name="filterCanvas" HorizontalAlignment="Left" Height="768" Margin="956,0,0,0" VerticalAlignment="Top" Width="410" Grid.ColumnSpan="2" Background="#E50878FF"                             >
+            <TextBlock Canvas.Left="74" TextWrapping="Wrap" Text="Filter" Canvas.Top="26" Foreground="Black" FontSize="30" FontFamily="Segoe UI"/>
+            <Button Canvas.Top="16" Style="{StaticResource FilterAppBarButtonStyle}" Foreground="Black" Canvas.Left="-4" AutomationProperties.Name=""/>
+            <StackPanel x:Name="stackFilter" Height="636" Canvas.Left="39" Canvas.Top="105" Width="338">
+                <TextBlock TextWrapping="Wrap" Text="With in" Foreground="Black" FontFamily="Segoe UI" FontSize="20" Height="41"/>
+                <ComboBox x:ConnectionId='8' x:Name="comboBox"                                                SelectedIndex="1">
+                    <TextBlock x:Name="_1hour" Text="1 hour"/>
+                    <TextBlock x:Name="_3hour" Text="3 hours"/>
+                    <TextBlock x:Name="_6hour" Text="6 hours"/>
+                    <TextBlock x:Name="_12hour" Text="12 hours"/>
+                    <TextBlock x:Name="_1day" Text="1 day"/>
+                    <TextBlock x:Name="_3day" Text="3 days"/>
+                    <TextBlock x:Name="_7day" Text="7 days"/>
+                </ComboBox>
+                <TextBlock TextWrapping="Wrap" Foreground="Black" FontFamily="Segoe UI" FontSize="14" Height="24" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+                <TextBlock TextWrapping="Wrap" Text="Solved" Foreground="Black" FontFamily="Segoe UI" FontSize="20" Height="46"/>
+                <StackPanel Orientation="Horizontal" Height="56">
+                    <RadioButton x:Name="radioSolved" Content="Solved" VerticalAlignment="Stretch" Width="124"/>
+                    <RadioButton x:Name="radioUnsolved" Content="Unsolved" VerticalAlignment="Stretch" Width="130"/>
+                    <RadioButton x:Name="radioAll" Content="All" VerticalAlignment="Stretch" Width="67" IsChecked="True"/>
+                </StackPanel>
+                <TextBlock TextWrapping="Wrap" Text="Tag" Foreground="Black" FontFamily="Segoe UI" FontSize="20" Height="46"/>
+                <StackPanel x:Name="stackCheckbox" Height="302" Orientation="Horizontal">
+                    <StackPanel Width="165">
+                        <CheckBox x:ConnectionId='11' x:Name="checkboxAll" Content="All" VerticalAlignment="Stretch"                          />
+                        <CheckBox x:Name="checkboxTraffic" Content="Traffic jam" VerticalAlignment="Stretch"/>
+                        <CheckBox x:Name="checkboxAccident" Content="Accident" VerticalAlignment="Stretch"/>
+                        <CheckBox x:Name="checkboxCrime" Content="Crime" VerticalAlignment="Stretch"/>
+                        <CheckBox x:Name="checkboxFire" Content="Fire accident" VerticalAlignment="Stretch"/>
+                        <CheckBox x:Name="checkboxProtesting" Content="Protesting" VerticalAlignment="Stretch"/>
+                    </StackPanel>
+                    <StackPanel>
+                        <CheckBox x:Name="checkboxBlackOut" Content="Black out" VerticalAlignment="Stretch"/>
+                        <CheckBox x:Name="checkboxFlood" Content="Flood" VerticalAlignment="Stretch"/>
+                        <CheckBox x:Name="checkboxEarthquake" Content="Earthquake" VerticalAlignment="Stretch"/>
+                        <CheckBox x:Name="checkboxConstructing" Content="Constructing" VerticalAlignment="Stretch"/>
+                        <CheckBox x:Name="checkboxTerrorism" Content="Terrorism" VerticalAlignment="Stretch"/>
+                        <CheckBox x:Name="checkboxOther" Content="Other" VerticalAlignment="Stretch"/>
+                    </StackPanel>
+                    
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Height="87" Margin="71,0,0,0">
+                    <Button x:ConnectionId='9' x:Name="buttonSave" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Style="{StaticResource SaveAppBarButtonStyle}"                       />
+                    <Button x:ConnectionId='10' HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Style="{StaticResource DeleteAppBarButtonStyle}" AutomationProperties.Name="Cancel"                       />
+                </StackPanel>
+            </StackPanel>
+        </Canvas>
+        <Canvas x:Name="bgpostCanvas" HorizontalAlignment="Left" Height="768" VerticalAlignment="Top" Width="1366" Background="#FFD1C7C7" Grid.ColumnSpan="2" Opacity="0.6"/>
+        <Canvas x:Name="postCanvas" HorizontalAlignment="Left" Height="610" Margin="99,93,0,0" VerticalAlignment="Top" Width="1186" Background="Black" Grid.ColumnSpan="2">
+            <Button x:ConnectionId='7' x:Name="cancelPostButton" Canvas.Left="1038" Canvas.Top="512" Style="{StaticResource DeleteAppBarButtonStyle}" AutomationProperties.Name="Cancel"                         />
+            <Button Canvas.Left="914" Canvas.Top="512" Style="{StaticResource AddAppBarButtonStyle}" AutomationProperties.Name="Post"/>
+            <TextBlock Canvas.Left="39" TextWrapping="Wrap" Text="Post Event" Canvas.Top="31" FontFamily="Segoe UI" FontSize="30"/>
+            <Rectangle Fill="#FFF4F4F5" Height="5" Canvas.Left="39" Stroke="Black" Canvas.Top="79" Width="1099" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <CompositeTransform ScaleY="-1"/>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <TextBlock Canvas.Left="67" TextWrapping="Wrap" Text="Tag" Canvas.Top="91" FontFamily="Segoe UI" FontSize="24"/>
+            <StackPanel Orientation="Horizontal" Height="50" Canvas.Left="67" Canvas.Top="146" Width="1071">
+                <CheckBox x:Name="checkboxPostTraffic" Content="Traffic jam" VerticalAlignment="Stretch" Width="108"/>
+                <CheckBox x:Name="checkboxPostAccident" Content="Accident" VerticalAlignment="Stretch" Width="98"/>
+                <CheckBox x:Name="checkboxPostCrime" Content="Crime" VerticalAlignment="Stretch" Width="80"/>
+                <CheckBox x:Name="checkboxPostFire" Content="Fire Accident" VerticalAlignment="Stretch" Width="119"/>
+                <CheckBox x:Name="checkboxPostProtesting" Content="Protesting" VerticalAlignment="Stretch" Width="101"/>
+                <CheckBox x:Name="checkboxPostBlackOut" Content="Black Out" VerticalAlignment="Stretch" Width="101"/>
+                <CheckBox x:Name="checkboxPostFlood" Content="Flood" VerticalAlignment="Stretch" Width="76"/>
+                <CheckBox x:Name="checkboxPostEarthquake" Content="Earthquake" VerticalAlignment="Stretch" Width="108"/>
+                <CheckBox x:Name="checkboxPostConstructing" Content="Constructing" VerticalAlignment="Stretch" Width="120"/>
+                <CheckBox x:Name="checkboxPostTerrorism" Content="Terrorism" VerticalAlignment="Stretch" Width="95"/>
+                <CheckBox x:Name="checkboxPostOther" Content="Other" VerticalAlignment="Stretch"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="30" Canvas.Left="68" Canvas.Top="196" Width="1070">
+                <CheckBox x:Name="checkPostAll" Content="All" VerticalAlignment="Stretch"/>
+            </StackPanel>
+            <TextBlock Canvas.Left="67" TextWrapping="Wrap" Text="Post by :" Canvas.Top="233" FontFamily="Segoe UI" FontSize="24"/>
+            <TextBlock x:Name="postbynameText" Canvas.Left="179" TextWrapping="Wrap" Canvas.Top="233" FontFamily="Segoe UI" FontSize="24" Width="959" Text="Name"/>
+            <TextBlock Canvas.Left="67" TextWrapping="Wrap" Text="Date" Canvas.Top="280" FontFamily="Segoe UI" FontSize="24"/>
+            <TextBlock Canvas.Left="581" TextWrapping="Wrap" Text="Time" Canvas.Top="280" FontFamily="Segoe UI" FontSize="24"/>
+            <TextBlock Canvas.Left="67" TextWrapping="Wrap" Text="Description" Canvas.Top="324" FontFamily="Segoe UI" FontSize="24"/>
+            <TextBox x:Name="postdateText" Canvas.Left="179" TextWrapping="Wrap" Text="TextBox" Canvas.Top="280" Width="370" IsReadOnly="True"/>
+            <TextBox x:Name="posttimeText" Canvas.Left="695" TextWrapping="Wrap" Text="TextBox" Canvas.Top="280" Width="370" IsReadOnly="True"/>
+
+
+            <ScrollViewer Height="170" Canvas.Left="105" Canvas.Top="380" Width="700" Visibility="Visible" MaxZoomFactor="5">
+                <TextBox x:Name="descriptionText" TextWrapping="Wrap" AcceptsReturn="True"/>
+            </ScrollViewer>
+        </Canvas>
+
+
+
+    </Grid>
+</Page>
+

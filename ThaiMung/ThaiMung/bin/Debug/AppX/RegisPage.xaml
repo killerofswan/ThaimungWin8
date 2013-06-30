@@ -1,0 +1,78 @@
+﻿<common:LayoutAwarePage
+    x:Name="pageRoot"
+    x:Class="ThaiMung.RegisPage"
+    DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ThaiMung"
+    xmlns:common="using:ThaiMung.Common"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+
+        <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
+        <x:String x:Key="AppName">My Application</x:String>
+    </Page.Resources>
+
+    <!--
+        This grid acts as a root panel for the page that defines two rows:
+        * Row 0 contains the back button and page title
+        * Row 1 contains the rest of the page layout
+    -->
+    <Grid Style="{StaticResource LayoutRootStyle}" Background="#E50878FF">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Back button and page title -->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="pageTitle" Grid.Column="1" Text="Registration" Style="{StaticResource PageHeaderTextStyle}" Margin="537,0,537,52"/>
+        </Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="100,58,0,0" Grid.Row="1" TextWrapping="Wrap" Text="e-mail" VerticalAlignment="Top" FontFamily="Segoe UI" FontSize="36"/>
+        <TextBox x:Name="emailRegis" HorizontalAlignment="Left" Margin="453,58,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="351" FontSize="22" Height="48"/>
+        <TextBlock HorizontalAlignment="Left" Margin="101,125,0,0" Grid.Row="1" TextWrapping="Wrap" Text="password" VerticalAlignment="Top" FontFamily="Segoe UI" FontSize="36"/>
+        <PasswordBox x:Name="passRegis" HorizontalAlignment="Left" Margin="453,125,0,0" Grid.Row="1" VerticalAlignment="Top" Width="351" FontSize="22" Height="48"/>
+        <TextBlock HorizontalAlignment="Left" Margin="100,193,0,0" Grid.Row="1" TextWrapping="Wrap" Text="confirm password" VerticalAlignment="Top" FontFamily="Segoe UI" FontSize="36"/>
+        <PasswordBox x:Name="conpassRegis" HorizontalAlignment="Left" Margin="453,193,0,0" Grid.Row="1" VerticalAlignment="Top" Width="351" FontSize="22" Height="48"/>
+        <TextBlock HorizontalAlignment="Left" Margin="100,316,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Firstname" VerticalAlignment="Top" FontFamily="Segoe UI" FontSize="36"/>
+        <TextBox x:Name="fnameRegis" HorizontalAlignment="Left" Margin="453,316,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="351" FontSize="22" Height="48"/>
+        <TextBlock HorizontalAlignment="Left" Margin="101,382,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Lastname" VerticalAlignment="Top" FontFamily="Segoe UI" FontSize="36"/>
+        <TextBox x:Name="lnameRegis" HorizontalAlignment="Left" Margin="453,382,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="351" FontSize="22" Height="48"/>
+        <TextBlock HorizontalAlignment="Left" Margin="100,448,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Telephone number" VerticalAlignment="Top" FontFamily="Segoe UI" FontSize="36"/>
+        <TextBox x:Name="phoneRegis" HorizontalAlignment="Left" Margin="453,448,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="351" FontSize="22" Height="48"/>
+        <Button x:ConnectionId='1' x:Name="submitButton" Content="Submit" HorizontalAlignment="Left" Margin="924,531,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="24"                      Height="57" Width="154"/>
+        <Button x:ConnectionId='2' x:Name="cancelButton" Content="Cancel" HorizontalAlignment="Left" Margin="1133,531,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="24"                      Height="57" Width="155"/>
+        <TextBlock x:Name="usererror" HorizontalAlignment="Left" Margin="878,82,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" FontFamily="Segoe UI" FontSize="18" Width="357"/>
+        <TextBlock x:Name="passerror" HorizontalAlignment="Left" Margin="878,217,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" FontFamily="Segoe UI" FontSize="18" Width="357"/>
+        <TextBlock x:Name="phoneerror" HorizontalAlignment="Left" Margin="857,472,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" FontFamily="Segoe UI" FontSize="18" Width="357"/>
+
+        <VisualStateManager.VisualStateGroups>
+
+            <!-- Visual states reflect the application's view state -->
+            <VisualStateGroup x:Name="ApplicationViewStates">
+                <VisualState x:Name="FullScreenLandscape"/>
+                <VisualState x:Name="Filled"/>
+
+                <!-- The entire page respects the narrower 100-pixel margin convention for portrait -->
+                <VisualState x:Name="FullScreenPortrait"/>
+
+                <!-- The back button and title have different styles when snapped -->
+                <VisualState x:Name="Snapped">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="pageTitle" Storyboard.TargetProperty="Style">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource SnappedPageHeaderTextStyle}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+</common:LayoutAwarePage>
+
